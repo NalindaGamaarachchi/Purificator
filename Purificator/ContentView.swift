@@ -8,10 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @StateObject var data: DataModel = DataModel()
+     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button {
+            data.readData()
+        } label: {
+            Text("Read data")
+        }
+        .onAppear {
+            data.readData()
+            print("View did appear")
+        }
+        
+        Text(data.phvalue)
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

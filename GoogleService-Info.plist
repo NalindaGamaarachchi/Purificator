@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>387799351488-r126e63cq5afq3236apj97ql4lnl41dh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.387799351488-r126e63cq5afq3236apj97ql4lnl41dh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDMRRNoMDRBOuInkUTqkNNzeKjOHxDZxbA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>387799351488</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Nalinda-Gamaarachchi.Purificator</string>
+	<key>PROJECT_ID</key>
+	<string>ph-meter-34d69</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ph-meter-34d69.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:387799351488:ios:f0b72645bb0464327a2d25</string>
+	<key>DATABASE_URL</key>
+	<string>https://ph-meter-34d69-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
