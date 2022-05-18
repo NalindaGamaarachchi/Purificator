@@ -16,7 +16,7 @@ struct ContentView: View {
           if authModel.user == nil {
             LoginView()
           } else {
-            HomeView()
+            TabBarView()
           }
         }
         .onAppear {
