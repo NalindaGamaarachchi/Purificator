@@ -9,27 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @StateObject var data: DataModel = DataModel()
+    @EnvironmentObject private var authModel: AuthenticationModel 
      
     var body: some View {
-        Button {
-            data.readData()
-        } label: {
-            Text("Read data")
+        Group {
+          if authModel.user == nil {
+            LoginView()
+          } else {
+            HomeView()
+          }
         }
         .onAppear {
-            data.readData()
-            print("View did appear")
+          authModel.listenToAuthState()
         }
-        
-        Text(data.phvalue)
     }
-    
     
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AuthenticationModel())
     }
 }

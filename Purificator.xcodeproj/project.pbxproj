@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A607442834C8DD0012BFB7 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A607432834C8DD0012BFB7 /* AuthenticationModel.swift */; };
+		29A607462834D1F40012BFB7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A607452834D1F30012BFB7 /* ProfileView.swift */; };
+		29A607482834D2090012BFB7 /* DailyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A607472834D2090012BFB7 /* DailyDataView.swift */; };
 		29C934FA282F93DD006A1820 /* PurificatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C934F9282F93DD006A1820 /* PurificatorApp.swift */; };
 		29C934FC282F93DD006A1820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C934FB282F93DD006A1820 /* ContentView.swift */; };
 		29C934FE282F93E2006A1820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C934FD282F93E2006A1820 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29A607432834C8DD0012BFB7 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		29A607452834D1F30012BFB7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		29A607472834D2090012BFB7 /* DailyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDataView.swift; sourceTree = "<group>"; };
 		29C934F6282F93DD006A1820 /* Purificator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purificator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C934F9282F93DD006A1820 /* PurificatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurificatorApp.swift; sourceTree = "<group>"; };
 		29C934FB282F93DD006A1820 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +105,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29A607492834D2890012BFB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29F976892830FFB20043DEAC /* DataModel.swift */,
+				29A607432834C8DD0012BFB7 /* AuthenticationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		29A6074B2834D29C0012BFB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29F976832830FEDC0043DEAC /* LoginView.swift */,
+				29F976872830FF0D0043DEAC /* HomeView.swift */,
+				29F976852830FEFA0043DEAC /* PoolSizeView.swift */,
+				29A607452834D1F30012BFB7 /* ProfileView.swift */,
+				29A607472834D2090012BFB7 /* DailyDataView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29A6074C2834D2A50012BFB7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		29C934ED282F93DD006A1820 = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +159,11 @@
 			children = (
 				29C934F9282F93DD006A1820 /* PurificatorApp.swift */,
 				29C934FB282F93DD006A1820 /* ContentView.swift */,
-				29F976832830FEDC0043DEAC /* LoginView.swift */,
-				29F976852830FEFA0043DEAC /* PoolSizeView.swift */,
-				29F976872830FF0D0043DEAC /* HomeView.swift */,
+				29A607492834D2890012BFB7 /* Model */,
+				29A6074B2834D29C0012BFB7 /* View */,
+				29A6074C2834D2A50012BFB7 /* Data */,
 				29C934FD282F93E2006A1820 /* Assets.xcassets */,
 				29C934FF282F93E2006A1820 /* Preview Content */,
-				29F976892830FFB20043DEAC /* DataModel.swift */,
 			);
 			path = Purificator;
 			sourceTree = "<group>";
@@ -305,11 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A607462834D1F40012BFB7 /* ProfileView.swift in Sources */,
 				29F976842830FEDD0043DEAC /* LoginView.swift in Sources */,
 				29F976862830FEFA0043DEAC /* PoolSizeView.swift in Sources */,
 				29C934FC282F93DD006A1820 /* ContentView.swift in Sources */,
 				29F976882830FF0D0043DEAC /* HomeView.swift in Sources */,
 				29C934FA282F93DD006A1820 /* PurificatorApp.swift in Sources */,
+				29A607482834D2090012BFB7 /* DailyDataView.swift in Sources */,
+				29A607442834C8DD0012BFB7 /* AuthenticationModel.swift in Sources */,
 				29F9768A2830FFB20043DEAC /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

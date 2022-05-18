@@ -10,49 +10,56 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var data: DataModel = DataModel()
     
+    
     var body: some View {
-        HStack {
+
+        VStack {
             Text("Today's Data")
-            
-            VStack {
-                HStack {
+
+            HStack {
+                VStack {
                     Text(data.phvalue)
                     Text("Ph Value")
                 }
-                HStack {
+                VStack {
                     Text(data.tempvalue)
                     Text("temp Value")
                 }
-                HStack {
+                VStack {
                     Text(data.wFlowvalue)
                     Text("wflow Value")
                 }
-                
-                
+
+
             }
-            
-            
+
+
             Text("today chamical")
-            VStack {
-                HStack {
+            HStack {
+                VStack {
                     Text("chlorine")
                     Text("chlorine value")
                 }
-                HStack {
+                VStack {
                     Text("asid")
                     Text("asid value")
                 }
-                HStack {
+                VStack {
                     Text("bhasma")
                     Text("bhasma value")
                 }
             }
-        
-            
+
+
             Text("mortor time")
             //progress bar
         }
+        .onAppear{
+            data.readData()
+        }
     }
+    
+
 }
 
 struct HomeView_Previews: PreviewProvider {

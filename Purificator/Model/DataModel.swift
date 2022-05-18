@@ -46,4 +46,5 @@ class DataModel: ObservableObject {
     func calculateChlorine() {
         
     }
+    
 }
