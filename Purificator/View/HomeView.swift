@@ -19,16 +19,20 @@ struct HomeView: View {
                 rawData()
                 Divider()
                     .background(Color.black.opacity(0.7))
+                    .padding(.bottom)
 
                 titleView(title:"Today chamical")
                 CalculatedData()
                 Divider()
                     .background(Color.black.opacity(0.7))
+                    .padding(.bottom)
                 
                 titleView(title:"Filter time")
-                //Data
+                filterTime(filterTime: data.filterTime, finishFilteTime: data.finishFilteTime)
+                
                 Divider()
                     .background(Color.black.opacity(0.7))
+                    .padding(.bottom)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.top)
@@ -65,13 +69,23 @@ struct HomeView: View {
             CalculatedDataCard(valueName: "Acid", value: String(data.acidValue))
             CalculatedDataCard(valueName: "Base", value: String(data.baseValue))
         }
+        
     }
     
     @ViewBuilder
-    private func filterTime() -> some View {
-        // add progress bar
-        Text(String(data.remainingFilterTime))
-        Text(String(data.filterTime))
+    private func filterTime(filterTime: Float, finishFilteTime: String) -> some View {
+        
+        let finishFilteTimeFloat = (finishFilteTime as NSString).floatValue
+        let remainingFilterTime = filterTime - finishFilteTimeFloat
+        let filterPercentage =  (finishFilteTimeFloat * 100) / filterTime
+        
+        VStack {
+            HStack {
+                progressBar(percentage: CGFloat(filterPercentage))
+                Text(String(format: "/ %.1fh", filterTime / 60))
+            }
+            Text(String(format: "Remaining Filter Time: %.1fh", remainingFilterTime / 60))
+        }
     }
     
     @ViewBuilder
@@ -118,6 +132,22 @@ struct HomeView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .shadow(color: Color.black.opacity(0.3), radius: 15, x: 0, y: 10)
         
+    }
+    
+    @ViewBuilder
+    private func progressBar(percentage: CGFloat) -> some View {
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                .frame(width: getRect().width / 1.5, height: 30)
+                .foregroundColor(Color.black.opacity(0.1))
+            
+            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                .frame(width: (getRect().width / 150) * percentage, height: 30) // width / 100
+                .background(LinearGradient(colors: [Color("Primary"), Color("Bg").opacity(0.7)], startPoint: .leading, endPoint: .trailing)
+                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                )
+                .foregroundColor(.clear)
+        }
     }
 
 }

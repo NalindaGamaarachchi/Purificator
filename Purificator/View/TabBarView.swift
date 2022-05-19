@@ -18,7 +18,7 @@ struct TabBarView: View {
             
             DailyDataView()
                 .tabItem {
-                    Label("Profile", systemImage: "person")
+                    Label("Daily", systemImage: "person")
                 }
             
             ProfileView()

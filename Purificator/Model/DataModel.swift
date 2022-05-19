@@ -31,32 +31,30 @@ class DataModel: ObservableObject {
     @Published var acidValue: Float = 0
     @Published var baseValue: Float = 0
     
+      
     func readData() {
         phData.observe(DataEventType.value, with: { snapshot in
             snapshot.value.map({ ph in
                 self.phvalue = ph as! String
-                print(ph)
             })
           })
         tempData.observe(DataEventType.value, with: { snapshot in
             snapshot.value.map({ temp in
                 self.tempvalue = temp as! String
-                print(temp)
             })
           })
         wFlowData.observe(DataEventType.value, with: { snapshot in
             snapshot.value.map({ wFlow in
                 self.wFlowvalue = wFlow as! String
-                print(wFlow)
             })
           })
         
         fTimeData.observe(DataEventType.value, with: { snapshot in
             snapshot.value.map({ fTime in
                 self.finishFilteTime = fTime as! String
-                print(fTime)
             })
           })
+        
     }
     
     func calculateChlorine() {
@@ -71,8 +69,4 @@ class DataModel: ObservableObject {
         
     }
     
-    func calculateFilterTime() {
-        let finishFilteTimeFloat = (finishFilteTime as NSString).floatValue
-        remainingFilterTime = filterTime / finishFilteTimeFloat
-    }
 }
