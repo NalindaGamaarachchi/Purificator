@@ -21,7 +21,7 @@ class DataViewModel: ObservableObject {
     @Published var totalBasePrice: Float = 0
     @Published var totalPrice: Float = 0
     
-    @Published var chlorinePrice: Float = 20
+    @Published var chlorinePrice: Float = 0.2
     @Published var acidPrice: Float = 0
     @Published var basePrice: Float = 0
     
