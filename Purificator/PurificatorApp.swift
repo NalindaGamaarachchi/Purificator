@@ -15,14 +15,7 @@ struct PurificatorApp: App {
     init() {
             FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
-//            Auth.auth().signInAnonymously { authResult, error in
-//                guard let user = authResult?.user else {
-//                    print("FAILED: Anonymously auth ")
-//                    return
-//                }
-//                let uId = user.uid
-//                print("Firebase user Id : \(uId)")
-//            }
+
         }
 
     var body: some Scene {

@@ -58,7 +58,7 @@ struct HomeView: View {
         HStack {
             rawDataCard(valueName: "Ph", value: data.phvalue, unit: "pH")
             rawDataCard(valueName: "Temperature", value: data.tempvalue, unit: "°C")
-            rawDataCard(valueName: "Water Flow", value: data.wFlowvalue, unit: "gpm")
+            rawDataCard(valueName: "Water Flow", value: data.wFlowvalue, unit: "L/M")
         }
     }
     
